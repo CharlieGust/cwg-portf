@@ -13,7 +13,6 @@
 <button class:active={$activeStore == keyword} on:click={setActive}
 class:bottom={src != null}
 class:primary={cat === "primary"}
-class:secondary={cat === "secondary"}
 >
   {#if src}
     <img {src} alt={keyword} width="30" />
@@ -24,17 +23,19 @@ class:secondary={cat === "secondary"}
 <style>
 
 button:not(.bottom) {
-    font-weight: 900;
-    font-size: 1.1rem;
+    font-weight: 500;
+    font-size: 1.8rem;
     max-height: 53px;
-    color: var(--accent);
+    color: var(--bg-light);
     padding: 1rem min(15px, 10%);
     transition: background-color 200ms;
-    margin-top: -9px;
-    border-bottom: 2px solid transparent;
+    margin-top: 1rem;
+    border-bottom: 5px solid transparent;
+    margin: 1rem;
   }
   button:not(.bottom):hover {
-    border-bottom: 2px solid var(--accent);
+    cursor: pointer;
+    font-weight: 900;
   }
   .bottom {
     font-size: 10px;
@@ -60,14 +61,7 @@ button:not(.bottom) {
     color: var(--text);
     font-size: 1.5em;
   }
-  button.secondary{
-    color: var(--text-secondary);
-    font-size: 1.1em;
-  }
-  button.primary:hover, button.secondary:hover {
-    background: var(--bg-light-hover);
-    border-bottom: 1px solid transparent;
-  }
+
   @media only screen and (max-width: 683px){
     button:not(.bottom):not(.primary){
       display: none;

@@ -1,1 +1,5 @@
-<h1>Kontakt</h1>
+<script>
+import { activeStore } from "../stores";
+</script>
+
+<h1>{$activeStore}</h1>

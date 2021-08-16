@@ -6,9 +6,7 @@
   import { activeStore } from "../stores.js";
 
   const src = null;
-  const cat = null;
   const p = "primary";
-  const s = "secondary";
 
   let overlay = false;
   const toggleOverlay = () => {
@@ -29,7 +27,7 @@
 <nav class="navbar">
   <div class="container">
     <button on:click={() => ($activeStore = "Home")}>
-      <img src="../cglogga1.png" alt="svelte" height="50" />
+      <img src="../cglogga2svartvit.png" alt="svelte" height="70" />
     </button>
     <div class="links">
       <NavLink keyword="Projekt" {src} cat={false} />
@@ -59,11 +57,11 @@
 
 <style>
   nav.navbar {
-    background: var(--bg-dark);
-    height: 4rem;
+    height: 6rem;
     margin: auto;
-    width: calc(100% + 5px);
-    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+    width: calc(100% + 1.7rem);
+    box-shadow: 4px 3px 5px 3px rgba(0, 0, 0, 0.233);
+    background-color: #c69a9f68;
   }
 
   .container {
@@ -113,7 +111,6 @@
     height: 100vh;
     z-index: 1000;
     background-color: var(--bg-dark);
-    color: var(--accent);
     box-shadow: 10px 10px 10px 100vw rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
@@ -137,6 +134,6 @@
   }
 
   img:not([alt="svelte"]) {
-    margin-top: -3px;
+    margin-top: 1rem;
   }
 </style>

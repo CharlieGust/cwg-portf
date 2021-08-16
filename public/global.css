@@ -1,17 +1,18 @@
 :root {
   --bg-dark: #253d52;
-  --bg-light: #fee7e9;
+  --bg-darker: #162029;
+  --bg-light: #fef6f6;
   --bg-light-hover: rgb(52, 62, 75);
-  --text: white;
+  --text: #F67280;
   --text-secondary: #607a9a;
   --accent: #F67280;
   --accent-hover: #a53758;
   --transparent-hover: rgba(256, 256, 256, 0.4);
-  --gradient-1: #fca7b0;
+  --gradient-3: #fca7b0;
   --gradient-2: #F67280;
-  --gradient-3: #C06C84;
-  --gradient-4: #6C5B7B;
+  --gradient-1: hsl(343, 70%, 65%);
   --gradient-5: #355C7D;
+
 }
 
 * {
@@ -22,11 +23,11 @@
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Orbitron', sans-serif;
 }
 
 body {
-  background: linear-gradient(45deg, var(--bg-light) 0%, var(--bg-light) 63%, var(--gradient-1) 63%, var(--gradient-1) 75%, var(--gradient-2) 75%, var(--gradient-2) 81%, var(--gradient-3) 81%, var(--gradient-3) 85%, var(--gradient-4) 85%, var(--gradient-4) 90%, var(--gradient-5) 90%, var(--gradient-5) 100%);
+  background: linear-gradient(35deg, var(--bg-dark) 80%, var(--bg-light) 80%, var(--gradient-2) 80%, var(--gradient-2) 88%, var(--gradient-3) 88%, var(--gradient-3) 95%, var(--gradient-1) 95%, var(--gradient-1) 100%);
   background-attachment: fixed;
   overflow-x: hidden;
   min-height: 100vh;
@@ -35,12 +36,19 @@ body {
   -webkit-text-stroke: 0.35px;
 }
 
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  color: var(--text);
   font-weight: normal;
   -webkit-text-stroke: 0.55px;
 }
@@ -76,7 +84,7 @@ main {
 
 p {
   line-height: 25px;
-  color: var(--text-secondary);
+  color: var(--bg-light);
 }
 
 b {
@@ -91,15 +99,15 @@ a:visited {
   color: var(--accent);
 }
 
-.transparente {
+.transperant {
   border: 1px solid var(--text);
   box-sizing: border-box;
-  border-radius: 100px;
+  border-radius: 2px;
   color: var(--text);
   transition: background-color 200ms;
 }
 
-.transparente:hover {
+.transperant:hover {
   background-color: var(--transparent-hover);
 }
 

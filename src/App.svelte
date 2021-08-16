@@ -1,34 +1,40 @@
 <script>
-
   import Navbar from "./components/Navbar.svelte";
   import Home from "./routes/Home.svelte";
   import Sites from "./routes/Sites.svelte";
-	import Skills from "./routes/Skills.svelte"
-	import Kontakt from "./routes/Kontakt.svelte"
-
-	import Transition from "./components/Transition.svelte"
+  import Skills from "./routes/Skills.svelte";
+  import Kontakt from "./routes/Kontakt.svelte";
+	import Landing from "./routes/Landing.svelte";
+  import Transition from "./components/Transition.svelte";
   import { activeStore } from "./stores";
 </script>
 
-<Navbar />
 
+{#if $activeStore != "Landing"}
+<Navbar />
+{/if}
 <main>
-  {#if $activeStore === "Home"}
-		<Transition>
-			<Home />
-		</Transition>
+	{#if $activeStore === "Landing"}
+	<Transition>
+		<Landing />
+	</Transition>
+  {:else if $activeStore === "Home"}
+
+    <Transition>
+      <Home />
+    </Transition>
   {:else if $activeStore === "Projekt"}
-		<Transition>
-			<Sites />
-		</Transition>
-	{:else if $activeStore === "Skills"}
-		<Transition>
-			<Skills />
-		</Transition>
-	{:else if $activeStore === "Kontakt"}
-		<Transition>
-			<Kontakt />
-		</Transition>
+    <Transition>
+      <Sites />
+    </Transition>
+  {:else if $activeStore === "Skills"}
+    <Transition>
+      <Skills />
+    </Transition>
+  {:else if $activeStore === "Kontakt"}
+    <Transition>
+      <Kontakt />
+    </Transition>
   {/if}
 </main>
 <!--

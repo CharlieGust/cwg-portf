@@ -1,1 +1,7 @@
-<h1>Skillz</h1>
+
+<script>
+  import { projectStore, activeStore } from "../stores";
+
+</script>
+
+  <h1>{$activeStore}</h1>
